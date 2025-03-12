@@ -1,1 +1,60 @@
 @import "tailwindcss";
+
+@font-face {
+    font-family: 'Recia';
+    src: url('../assets/fonts/Recia-Variable.ttf');
+}
+
+@font-face {
+    font-family: 'Recia Italic';
+    src: url('../assets/fonts/Recia-VariableItalic.ttf');
+}
+
+@font-face {
+    font-family: 'Epilogue';
+    src: url('../assets/fonts/Epilogue-Variable.ttf');
+}
+
+@font-face {
+    font-family: 'Epilogue Italic';
+    src: url('../assets/fonts/Epilogue-VariableItalic.ttf');
+}
+
+@theme {
+    --font-sans: "Epilogue", system-ui, serif;
+    --font-serif: "Recia", Times, serif;
+    --font-sans-italic: "Epilogue Italic", system-ui, serif;
+    --font-serif-italic: "Recia Italic", Times, serif;
+
+    --color-neutral-50: #fafafa;
+    --color-neutral-100: #f9f9f9;
+    --color-neutral-200: #e9e9e9;
+    --color-neutral-300: #d9d9d9;
+    --color-neutral-400: #a9a9a9;
+    --color-neutral-500: #797979;
+    --color-neutral-600: #595959;
+    --color-neutral-700: #494949;
+    --color-neutral-800: #292929;
+    --color-neutral-900: #191919;
+    --color-neutral-950: #090909;
+
+    --color-professional-50: #c2ffe3;
+    --color-professional-100: #85ffc8;
+    --color-professional-200: #5cffb6;
+    --color-professional-300: #33ffa3;
+    --color-professional-400: #0aff91;
+    --color-professional-500: #00e17c;
+    --color-professional-600: #00b865;
+    --color-professional-700: #008f4f;
+    --color-professional-800: #006638;
+    --color-professional-900: #003d22;
+    --color-professional-950: #002916;
+}
+
+* {
+    scrollbar-width: thin;
+}
+
+.responsive-x {
+    @apply px-7 sm:px-12 md:px-14 lg:px-40 xl:px-80;
+}
