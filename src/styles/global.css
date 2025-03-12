@@ -58,3 +58,9 @@
 .responsive-x {
     @apply px-7 sm:px-12 md:px-14 lg:px-40 xl:px-80;
 }
+
+@media (width <= 1024px) {
+    * {
+        scrollbar-width: none;
+    }
+}
