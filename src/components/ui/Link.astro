@@ -1,0 +1,19 @@
+---
+interface Props {
+    link: string,
+    className?: string,
+    variant?: 'normal' | 'inline',
+    target?: string
+}
+
+const { link, className, variant = 'inline', target }: Props = Astro.props;
+
+const variantClass = {
+    normal: 'flex items-center justify-center',
+    inline: 'inline text-professional-500'
+}
+---
+
+<a href={link} target={target} class=`group font-medium ${variantClass[variant]} gap-1 transition duration-150 hover:text-professional-700 select-none ${className}`>
+    <slot />
+</a>
