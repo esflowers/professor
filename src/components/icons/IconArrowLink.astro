@@ -1,0 +1,12 @@
+---
+interface Props {
+    size?: string,
+    stroke?: string
+}
+
+const { size = '20', stroke = '1.5' }: Props = Astro.props;
+---
+
+<svg width={size} height={size} viewBox="0 0 24 24" stroke-width={stroke} fill="none" class="transition-transform duration-150 group-hover:translate-x-px group-hover:-translate-y-px" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6.00005 19L19 5.99996M19 5.99996V18.48M19 5.99996H6.52005" stroke="currentColor" stroke-width={stroke} stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
