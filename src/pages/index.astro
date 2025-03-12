@@ -1,7 +1,29 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Menu from '../layouts/Menu.astro';
+import Footer from '../layouts/Footer.astro';
+import Subjects from '../layouts/Subjects.astro';
+import Cover from '../components/ui/Cover.astro';
 ---
 
 <Layout>
-	<h1>Professor</h1>
+	<Cover src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxCcTFdunkDYdtcGvWDMuKX-aYAcJDyWKWXg&s" alt='d' />
+
+	<main class="responsive-x my-14 space-y-9">
+		<h1 class="font-medium text-xl">Estrada Flores, Juan Diego.</h1>
+		
+		<div class="grid grid-cols-1 sm:grid-cols-3 gap-9 md:gap-16">
+			<div class="sm:col-span-2">
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo repellendus doloribus impedit et veniam ullam iste perferendis minus voluptatum iusto, eius est qui itaque modi dicta voluptatem id. In, fugit!
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo provident dolore, voluptates tempore error temporibus odit eveniet blanditiis? Eveniet, delectus? Quasi quis maxime praesentium nisi quisquam doloremque ipsum asperiores!</p>
+			</div>
+
+			<aside class="space-y-7">
+				<Subjects />
+				<Menu />
+			</aside>
+		</div>
+	</main>
+
+	<Footer />
 </Layout>
