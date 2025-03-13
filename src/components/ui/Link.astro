@@ -9,11 +9,11 @@ interface Props {
 const { link, className, variant = 'inline', target }: Props = Astro.props;
 
 const variantClass = {
-    normal: 'flex items-center justify-center',
-    inline: 'inline text-professional-500'
+    normal: 'flex items-center justify-center decoration-transparent hover:decoration-professional-50',
+    inline: 'inline decoration-professional-50 hover:decoration-professional-200'
 }
 ---
 
-<a href={link} target={target} class=`group font-medium ${variantClass[variant]} gap-1 transition duration-150 hover:text-professional-700 select-none ${className}`>
+<a href={link} target={target} class=`group font-normal transition duration-150 ${variantClass[variant]} gap-1 underline decoration-2 select-none ${className}`>
     <slot />
 </a>
