@@ -1,8 +1,12 @@
+---
+import { subjects, subjectsName } from '../assets/constants'
+---
+
 <nav class="w-full relative space-y-0.5">
-    <h2 class="absolute top-0 left-0 text-xs text-neutral-600">Materias</h2>
-    <p class="font-serif-italic font-medium text-end text-lg">Philosophy</p>
-    <p class="font-serif-italic font-medium text-end text-lg">Math</p>
-    <p class="font-serif-italic font-medium text-end text-lg">History</p>
-    <p class="font-serif-italic font-medium text-end text-lg">Programming</p>
-    <p class="font-serif-italic font-medium text-end text-lg">Technology</p>
+    <h2 class="absolute top-0 right-0 text-xs text-neutral-600">{subjectsName}</h2>
+    {
+        subjects.map(subject => (
+            <p class="italic text-sm">{subject}</p>
+        ))
+    }
 </nav>
