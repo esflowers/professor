@@ -1,11 +1,13 @@
 ---
+import { menuName, pages } from "../assets/constants"
 import Link from "../components/ui/Link.astro"
 ---
 
 <nav class="w-full relative space-y-0.5">
-    <h2 class="absolute top-0 left-0 text-xs text-neutral-600">Menú</h2>
-    <Link link="#" variant="normal" className="justify-end text-end text-sm">Contact</Link>
-    <Link link="#" variant="normal" className="justify-end text-end text-sm">Articles</Link>
-    <Link link="#" variant="normal" className="justify-end text-end text-sm">About me</Link>
-    <Link link="#" variant="normal" className="justify-end text-end text-sm">FAQ</Link>
+    <h2 class="absolute top-0 right-0 text-xs text-neutral-600">{menuName}</h2>
+    {
+        pages.map(page => (
+            <Link link={page.link} variant="normal" className="justify-start text-sm">{page.name}</Link>
+        ))
+    }
 </nav>
