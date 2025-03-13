@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'Linden Hill';
-    src: url('../assets/fonts/LindenHill.otf');
+    font-family: 'Gambetta';
+    src: url('../assets/fonts/Gambetta.ttf');
 }
 
 @font-face {
-    font-family: 'Linden Hill Italic';
-    src: url('../assets/fonts/LindenHillItalic.otf');
+    font-family: 'Gambetta Italic';
+    src: url('../assets/fonts/GambettaItalic.ttf');
 }
 
 @font-face {
@@ -22,9 +22,9 @@
 
 @theme {
     --font-sans: "Epilogue", system-ui, serif;
-    --font-serif: "Linden Hill", Times, serif;
+    --font-serif: "Gambetta", Times, serif;
     --font-sans-italic: "Epilogue Italic", system-ui, serif;
-    --font-serif-italic: "Linden Hill Italic", Times, serif;
+    --font-serif-italic: "Gambetta Italic", Times, serif;
 
     --color-neutral-50: #fafafa;
     --color-neutral-100: #f9f9f9;
