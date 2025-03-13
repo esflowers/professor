@@ -1,30 +1,30 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: 'Recia';
-    src: url('../assets/fonts/Recia-Variable.ttf');
+    font-family: 'Linden Hill';
+    src: url('../assets/fonts/LindenHill.otf');
 }
 
 @font-face {
-    font-family: 'Recia Italic';
-    src: url('../assets/fonts/Recia-VariableItalic.ttf');
+    font-family: 'Linden Hill Italic';
+    src: url('../assets/fonts/LindenHillItalic.otf');
 }
 
 @font-face {
     font-family: 'Epilogue';
-    src: url('../assets/fonts/Epilogue-Variable.ttf');
+    src: url('../assets/fonts/Epilogue.ttf');
 }
 
 @font-face {
     font-family: 'Epilogue Italic';
-    src: url('../assets/fonts/Epilogue-VariableItalic.ttf');
+    src: url('../assets/fonts/EpilogueItalic.ttf');
 }
 
 @theme {
     --font-sans: "Epilogue", system-ui, serif;
-    --font-serif: "Recia", Times, serif;
+    --font-serif: "Linden Hill", Times, serif;
     --font-sans-italic: "Epilogue Italic", system-ui, serif;
-    --font-serif-italic: "Recia Italic", Times, serif;
+    --font-serif-italic: "Linden Hill Italic", Times, serif;
 
     --color-neutral-50: #fafafa;
     --color-neutral-100: #f9f9f9;
@@ -53,6 +53,10 @@
 
 * {
     scrollbar-width: thin;
+}
+
+::selection {
+    @apply text-neutral-950 bg-professional-50
 }
 
 .responsive-x {
