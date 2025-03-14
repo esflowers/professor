@@ -3,21 +3,23 @@ import Layout from '../layouts/Layout.astro';
 import Menu from '../layouts/Menu.astro';
 import Footer from '../layouts/Footer.astro';
 import Subjects from '../layouts/Subjects.astro';
-import Cover from '../components/ui/Cover.astro';
+import { author, description, name, quote } from '../assets/constants';
 ---
 
 <Layout>
 	<main class="responsive-x my-14">
 		<header>
-			<q class="font-serif-italic font-thin text-5xl italic">Incluso mientras enseñan, los hombres aprenden.</q>
-			<figcaption class="mt-5 font-serif-italic font-medium text-xl">- Séneca.</figcaption>
+			<q class="font-serif-italic font-light text-5xl italic">{quote}</q>
+			<figcaption class="mt-2.5 font-serif-italic text-xl">&mdash; {author}</figcaption>
 		</header>
 		
-		<div class="mt-9 grid grid-cols-1 sm:grid-cols-3 gap-9 md:gap-16">
-			<div class="sm:col-span-2">
-				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo repellendus doloribus impedit et veniam ullam iste perferendis minus voluptatum iusto, eius est qui itaque modi dicta voluptatem id. In, fugit!
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto nemo provident dolore, voluptates tempore error temporibus odit eveniet blanditiis? Eveniet, delectus? Quasi quis maxime praesentium nisi quisquam doloremque ipsum asperiores!</p>
-			</div>
+		<div class="mt-7 md:mt-9 grid grid-cols-1 sm:grid-cols-3 gap-7 md:gap-16">
+			<article class="sm:col-span-2 space-y-2">
+				<h1>Soy {name}</h1>
+				<h2>{description}</h2>
+				<p>Mi forma de enseñar consiste en presentar un tema para cuestionarlo, dar espacio a las dudas y luego darles respuestas. Desde pequeño comprendí las amplias capacidades transformadoras de la educación y cómo puede potenciar a la gente.</p>
+				<p>He impartido clases en una escuela privada con grupos reducidos, enseñando a niños y jóvenes. Durante mi propia trayectoria académica, también he sido partícipe en clases de otros profesores para aclarar temas a mis compañeros. No explico para que los alumnos memoricen a corto plazo, sino para que se acerquen a comprender de qué estamos hablando.</p>
+			</article>
 
 			<aside class="space-y-7">
 				<Subjects />
