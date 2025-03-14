@@ -55,6 +55,11 @@
     scrollbar-width: thin;
 }
 
+p {
+    @apply text-pretty;
+}
+
+
 ::selection {
     @apply text-neutral-950 bg-professional-50
 }
