@@ -5,7 +5,7 @@ import Footer from '../layouts/Footer.astro';
 import HeaderNav from '../layouts/HeaderNav.astro';
 import Link from '../components/ui/Link.astro';
 import IconArrowLink from '../components/icons/IconArrowLink.astro';
-import { textContact, mail, textResume, linkResume, linkMail } from '../assets/constants';
+import { textContact, mail, textResume, linkResume, linkMail, linkProfessional, linkAcademic } from '../assets/constants';
 ---
 
 <Layout>
@@ -18,7 +18,10 @@ import { textContact, mail, textResume, linkResume, linkMail } from '../assets/c
 			<article class="sm:col-span-2">
                 <h2 class="text-xs text-neutral-600">Correo electrónico:</h2>
                 <Link link={linkMail} variant='underline' className="mt-2.5 text-xl md:text-2xl xl:text-3xl">{mail}<IconArrowLink /></Link>
-                <Link link={linkResume} variant='underline' className="mt-9 text-xl md:text-2xl xl:text-3xl">{textResume}<IconArrowLink /></Link>
+                <Link link={linkResume} target='_blank' variant='underline' className="my-9 text-xl md:text-2xl xl:text-3xl">{textResume}<IconArrowLink /></Link>
+				<h2 class="text-xs text-neutral-600">Portafolios:</h2>
+                <Link link={linkAcademic} target='_blank' variant='underline' className="mt-2.5 text-xl md:text-2xl xl:text-3xl">Academic.<IconArrowLink /></Link>
+                <Link link={linkProfessional} target='_blank' variant='underline' className="mt-2.5 text-xl md:text-2xl xl:text-3xl">Professional.<IconArrowLink /></Link>
             </article>
 
 			<Menu />
