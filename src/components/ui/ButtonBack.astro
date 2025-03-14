@@ -1,0 +1,13 @@
+---
+import IconArrowLeft from "../icons/IconArrowLeft.astro"
+---
+
+<button id="btnGoBack" class="cursor-pointer group transition duration-150 text-neutral-900 hover:text-black">
+    <IconArrowLeft stroke="2" />
+</button>
+
+<script>
+    document.getElementById('btnGoBack')?.addEventListener('click', () => {
+        window.history.back()
+    })
+</script>
