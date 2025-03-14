@@ -1,11 +1,11 @@
 ---
 import IconArrowLink from "../components/icons/IconArrowLink.astro"
 import Link from "../components/ui/Link.astro"
-import { linkMail } from "../assets/constants"
+import { linkMail, linkResume, textContact, textResume } from "../assets/constants"
 ---
 
 <footer class="py-5 responsive-x text-xs flex items-center gap-5">
-    <Link link='#' variant="normal" target="_blank" className="leading-3 align-baseline">Resume<IconArrowLink size="12" stroke="2" /></Link>
-    <Link link={linkMail} variant="normal" className="leading-3 align-baseline">Contact<IconArrowLink size="12" stroke="2" /></Link>
+    <Link link={linkResume} variant="normal" target="_blank" className="leading-3 align-baseline">{textResume}<IconArrowLink size="12" stroke="2" /></Link>
+    <Link link={linkMail} variant="normal" className="leading-3 align-baseline">{textContact}<IconArrowLink size="12" stroke="2" /></Link>
     <time datetime="2024 - 2025" class="ms-auto">2024 - 2025</time>
 </footer>
