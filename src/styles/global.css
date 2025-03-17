@@ -1,6 +1,16 @@
 @import "tailwindcss";
 
 @font-face {
+    font-family: 'Host Grotesk';
+    src: url('../assets/fonts/HostGrotesk.ttf');
+}
+
+@font-face {
+    font-family: 'Host Grotesk Italic';
+    src: url('../assets/fonts/HostGroteskItalic.ttf');
+}
+
+@font-face {
     font-family: 'Gambetta';
     src: url('../assets/fonts/Gambetta.ttf');
 }
@@ -21,9 +31,11 @@
 }
 
 @theme {
-    --font-sans: "Epilogue", system-ui, serif;
+    --font-type: "Host Grotesk", system-ui, sans-serif;
+    --font-sans: "Epilogue", system-ui, sans-serif;
     --font-serif: "Gambetta", Times, serif;
-    --font-sans-italic: "Epilogue Italic", system-ui, serif;
+    --font-type-italic: "Host Grotesk Italic", system-ui, sans-serif;
+    --font-sans-italic: "Epilogue Italic", system-ui, sans-serif;
     --font-serif-italic: "Gambetta Italic", Times, serif;
 
     --color-neutral-50: #fafafa;
@@ -59,9 +71,8 @@ p {
     @apply text-pretty;
 }
 
-
 ::selection {
-    @apply text-neutral-950 bg-professional-50
+    @apply text-neutral-950 bg-professional-50;
 }
 
 .responsive-x {
