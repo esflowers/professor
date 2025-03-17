@@ -1,9 +1,10 @@
 ---
+import { textGoBack } from "../../assets/constants"
 import IconArrowLeft from "../icons/IconArrowLeft.astro"
 ---
 
-<button id="btnGoBack" class="cursor-pointer group transition duration-150 text-neutral-900 hover:text-black">
-    <IconArrowLeft stroke="2" />
+<button id="btnGoBack" title={textGoBack} class="cursor-pointer group transition duration-150 text-neutral-900 hover:text-black">
+    <IconArrowLeft size="17" stroke="2" />
 </button>
 
 <script>
