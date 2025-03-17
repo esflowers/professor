@@ -5,24 +5,24 @@ import Footer from '../layouts/Footer.astro';
 import HeaderNav from '../layouts/HeaderNav.astro';
 import Link from '../components/ui/Link.astro';
 import IconArrowLink from '../components/icons/IconArrowLink.astro';
-import { textContact, mail, textResume, linkResume, linkMail, linkProfessional, linkAcademic } from '../assets/constants';
+import { textAcademic, textProgramming, textPortfolios, textMails, textContact, mail, textResume, linkResume, linkMail, linkProfessional, linkAcademic } from '../assets/constants';
 ---
 
-<Layout>
+<Layout title={textContact}>
 	<main class="responsive-x my-14">
 		<HeaderNav>
-            <h1 class="text-end">{textContact}.</h1>
+            <h1 class="font-type text-lg text-end">{textContact}</h1>
         </HeaderNav>
 		
-		<div class="mt-7 md:mt-9 grid grid-cols-1 sm:grid-cols-3 gap-7 md:gap-16">
+		<div class="mt-7 md:mt-9 grid grid-cols-1 sm:grid-cols-3 gap-7 sm:gap-10 md:gap-16">
 			<article class="sm:col-span-2">
-                <h2 class="text-xs text-neutral-600">Correo electrónico:</h2>
-                <Link link={linkMail} variant='underline' className="mt-2.5 text-xl md:text-2xl xl:text-3xl">{mail}<IconArrowLink /></Link>
-                <Link link={linkResume} target='_blank' variant='underline' className="my-9 text-xl md:text-2xl xl:text-3xl">{textResume}<IconArrowLink /></Link>
-				<h2 class="text-xs text-neutral-600">Portafolios:</h2>
-                <Link link={linkAcademic} target='_blank' variant='underline' className="mt-2.5 text-xl md:text-2xl xl:text-3xl">Academic.<IconArrowLink /></Link>
-                <Link link={linkProfessional} target='_blank' variant='underline' className="mt-2.5 text-xl md:text-2xl xl:text-3xl">Professional.<IconArrowLink /></Link>
-            </article>
+                <h2 class="small">{textMails}</h2>
+                <Link link={linkMail} variant='underline' className="mt-3 text-xl md:text-2xl xl:text-3xl">{mail}<IconArrowLink /></Link>
+				<h2 class="mt-10 small">{textPortfolios}</h2>
+                <Link link={linkAcademic} target='_blank' variant='underline' className="mt-3 text-xl md:text-2xl xl:text-3xl">{textAcademic}<IconArrowLink /></Link>
+                <Link link={linkProfessional} target='_blank' variant='underline' className="mt-3 text-xl md:text-2xl xl:text-3xl">{textProgramming}<IconArrowLink /></Link>
+                <Link link={linkResume} target='_blank' variant='underline' className="mt-10 text-xl md:text-2xl xl:text-3xl">{textResume}<IconArrowLink /></Link>
+			</article>
 
 			<Menu />
 		</div>
