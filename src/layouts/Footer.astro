@@ -4,8 +4,8 @@ import Link from "../components/ui/Link.astro"
 import { linkMail, linkResume, textContact, textResume } from "../assets/constants"
 ---
 
-<footer class="py-5 responsive-x text-xs flex items-center gap-5">
-    <Link link={linkResume} variant="normal" target="_blank" className="leading-3 align-baseline">{textResume}<IconArrowLink size="12" stroke="2" /></Link>
-    <Link link={linkMail} variant="normal" className="leading-3 align-baseline">{textContact}<IconArrowLink size="12" stroke="2" /></Link>
-    <time datetime="2024 - 2025" class="ms-auto">2024 - 2025</time>
+<footer class="py-7 responsive-x text-xs flex items-center gap-5">
+    <Link link={linkResume} variant="normal" target="_blank">{textResume}<IconArrowLink size="12" stroke="2" /></Link>
+    <Link link={linkMail} variant="normal">{textContact}<IconArrowLink size="12" stroke="2" /></Link>
+    <time datetime="2024 - 2025" class="ms-auto font-type font-medium">2024 - 2025</time>
 </footer>
