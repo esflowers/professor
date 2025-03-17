@@ -6,13 +6,13 @@ import HeaderNav from '../layouts/HeaderNav.astro';
 import { page404, text404 } from '../assets/constants';
 ---
 
-<Layout>
+<Layout title={page404}>
 	<main class="responsive-x my-14">
 		<HeaderNav>
-            <h1 class="text-end">{page404}</h1>
+            <h1 class="font-type text-lg text-end">{page404}</h1>
         </HeaderNav>
 		
-		<div class="mt-7 md:mt-9 grid grid-cols-1 sm:grid-cols-3 gap-7 md:gap-16">
+		<div class="mt-7 md:mt-9 grid grid-cols-1 sm:grid-cols-3 gap-7 sm:gap-10 md:gap-16">
 			<article class="sm:col-span-2 text-5xl md:text-7xl xl:text-9xl">
                 {text404}
 			</article>
