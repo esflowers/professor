@@ -1,12 +1,14 @@
-export const title = 'Professional Professor.'
+export const theTitle = 'Professional Professor.'
 export const name = 'Estrada Flores, Juan Diego.'
 export const description = 'Docente versado en estudiar.'
 export const mail = 'estrada.flsw@gmail.com'
 export const quote = 'Incluso mientras enseñan, los hombres aprenden.'
 export const author = 'Séneca.'
+export const url = 'https://professor.esflowers.icu/'
+export const preview = 'https://professor.esflowers.icu/img/preview.png'
 
 export const linkMail = `mailto:${mail}?subject=Enseñanza.`
-export const linkResume = '#'
+export const linkResume = './Currículum. Estrada Flores.pdf'
 export const linkProfessional = 'https://esflowers.icu/'
 export const linkAcademic = 'https://academic.esflowers.icu/'
 
