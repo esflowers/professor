@@ -1,0 +1,76 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Menu from '../layouts/Menu.astro';
+import Footer from '../layouts/Footer.astro';
+import HeaderNav from '../layouts/HeaderNav.astro';
+import { pageFaq, textFonts, fontSerif, fontSerifMade, fontSans, fontSansMade, textDesigned, textDeveloped, textDevelopedWith, textAboutSite, textAboutTeach } from '../assets/constants';
+---
+
+<Layout title={pageFaq}>
+	<main class="responsive-x my-14">
+        <HeaderNav>
+            <h1 class="font-type text-lg text-end">{pageFaq}</h1>
+        </HeaderNav>
+		
+		<div class="mt-7 md:mt-9 grid grid-cols-1 sm:grid-cols-3 gap-7 sm:gap-10 md:gap-16">
+			<article class="sm:col-span-2 space-y-9">
+                <div class="space-y-2.5">
+                    <h2 class="small">{textAboutTeach}</h2>
+                    <p><span class="font-medium">¿Qué materias imparto?</span> Principalmente aquellas a las que he dedicado más tiempo de estudio de forma independiente.</p>
+                    <p><span class="font-medium">¿Cuento con un título universitario?</span> Actualmente, no tengo un título universitario, pero he dedicado años al estudio profundo de las materias que enseño porque me <i class="font-type-italic">apasionan</i>.</p>
+                    <p><span class="font-medium">¿A qué niveles he impartido clases?</span> A alumnos de primaria, secundaria y preparatoria.</p>
+                    <p><span class="font-medium">¿Qué herramientas utilizo?</span> Recursos digitales, material didáctico y estrategias distintas.</p>
+                    <p><span class="font-medium">¿Cómo evalúo el aprendizaje de los estudiantes?</span> Sencillo, se nota el cambio.</p>
+                </div>
+                <div class="space-y-2.5">
+                    <h2 class="small">{textAboutSite}</h2>
+                    <p>Este sitio fue creado para compartir mi trayectoria profesional como docente, impulsar el ámbito educativo y redactar contenido que sirva como referencia para el aprendizaje.</p>
+                </div>
+				<div class="space-y-2.5">
+                    <h2 class="small">{textFonts}</h2>
+                    <div id="fontNameSerif" class="space-y-0.5 cursor-crosshair">
+                        <h3 class="font-serif text-5xl sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">{fontSerif}</h3>
+                        <figcaption class="font-type-italic text-sm text-neutral-800">{textDesigned} {fontSerifMade}.</figcaption>
+                    </div>
+                    <div id="fontNameSans" class="mt-8 space-y-0.5 cursor-crosshair">
+                        <h3 class="text-5xl sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-9xl">{fontSans}</h3>
+                        <figcaption class="font-type-italic text-sm text-neutral-800">{textDesigned} {fontSansMade}.</figcaption>
+                    </div>
+                </div>
+                <div class="space-y-2.5">
+                    <h2 class="small">{textDeveloped}</h2>
+                    <p>{textDevelopedWith}</p>
+                </div>
+			</article>
+
+			<aside class="space-y-7">
+				<Menu />
+                <span id="previewLetter" class="w-full hidden md:flex sticky top-0 text-neutral-950 text-[15rem] xl:text-[20rem]">g</span>
+			</aside>
+		</div>
+	</main>
+
+	<Footer />
+</Layout>
+
+<script>
+    const letter = document.getElementById('previewLetter')
+    const fontNameSerif = document.getElementById('fontNameSerif')
+    const fontNameSans = document.getElementById('fontNameSans')
+
+    if (letter && fontNameSerif) {
+        fontNameSerif.addEventListener('mouseover', () => {
+            letter.innerHTML = 'f'
+            letter.classList.remove('font-sans')
+            letter.classList.add('font-serif-italic')
+        })
+    }
+
+    if (letter && fontNameSans) {
+        fontNameSans.addEventListener('mouseover', () => {
+            letter.innerHTML = 'g'
+            letter.classList.remove('font-serif-italic')
+            letter.classList.add('font-sans')
+        })
+    }
+</script>
