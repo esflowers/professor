@@ -5,13 +5,13 @@ import Footer from '../layouts/Footer.astro';
 import HeaderNav from '../layouts/HeaderNav.astro';
 import Link from '../components/ui/Link.astro';
 import IconArrowLink from '../components/icons/IconArrowLink.astro';
-import { textAcademic, textProgramming, textPortfolios, textMails, textContact, mail, textResume, linkResume, linkMail, linkProfessional, linkAcademic } from '../assets/constants';
+import { textAcademic, textProgramming, textPortfolios, textMails, pageContact, mail, textResume, linkResume, linkMail, linkProfessional, linkAcademic } from '../assets/constants';
 ---
 
-<Layout title={textContact}>
+<Layout title={pageContact}>
 	<main class="responsive-x my-14">
 		<HeaderNav>
-            <h1 class="font-type text-lg text-end">{textContact}</h1>
+            <h1 class="font-type text-lg text-end">{pageContact}</h1>
         </HeaderNav>
 		
 		<div class="mt-7 md:mt-9 grid grid-cols-1 sm:grid-cols-3 gap-7 sm:gap-10 md:gap-16">

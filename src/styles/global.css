@@ -50,17 +50,17 @@
     --color-neutral-900: #191919;
     --color-neutral-950: #090909;
 
-    --color-professional-50: #c2ffe3;
-    --color-professional-100: #85ffc8;
-    --color-professional-200: #5cffb6;
-    --color-professional-300: #33ffa3;
-    --color-professional-400: #0aff91;
-    --color-professional-500: #00e17c;
-    --color-professional-600: #00b865;
-    --color-professional-700: #008f4f;
-    --color-professional-800: #006638;
-    --color-professional-900: #003d22;
-    --color-professional-950: #002916;
+    --color-primary-50: #c2ffe3;
+    --color-primary-100: #85ffc8;
+    --color-primary-200: #5cffb6;
+    --color-primary-300: #33ffa3;
+    --color-primary-400: #0aff91;
+    --color-primary-500: #00e17c;
+    --color-primary-600: #00b865;
+    --color-primary-700: #008f4f;
+    --color-primary-800: #006638;
+    --color-primary-900: #003d22;
+    --color-primary-950: #002916;
 }
 
 * {
@@ -72,11 +72,15 @@ p {
 }
 
 ::selection {
-    @apply text-neutral-950 bg-professional-50;
+    @apply text-neutral-950 bg-primary-50;
 }
 
 .responsive-x {
     @apply px-7 sm:px-12 md:px-14 lg:px-40 xl:px-80;
+}
+
+.small {
+    @apply font-type text-xs text-neutral-600;
 }
 
 @media (width <= 1024px) {
