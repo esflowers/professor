@@ -4,41 +4,53 @@ import Menu from '../layouts/Menu.astro';
 import Footer from '../layouts/Footer.astro';
 import Subjects from '../layouts/Subjects.astro';
 import HeaderNav from '../layouts/HeaderNav.astro';
-import { author, description, name, quote, textAbout } from '../assets/constants';
+import { experiences, textAbout, schools } from '../assets/constants';
 ---
 
 <Layout>
 	<main class="responsive-x my-14">
         <HeaderNav>
-            <h1 class="text-end">{textAbout}.</h1>
+            <h1 class="font-type text-lg text-end">{textAbout}.</h1>
         </HeaderNav>
 
-		<div class="mt-7 md:mt-9 grid grid-cols-1 sm:grid-cols-3 gap-7 md:gap-16">
-			<article class="sm:col-span-2 space-y-5">
+		<div class="mt-7 md:mt-9 grid grid-cols-1 sm:grid-cols-3 gap-7 sm:gap-10 md:gap-16">
+			<article class="sm:col-span-2 space-y-9">
                 <div class="space-y-1.5">
-                    <h2 class="text-xs text-neutral-600">Experiencia:</h2>
-                    <ul class="space-y-2">
-                        <li>
-                            <time datetime="2024 - 2025" class="font-semibold tracking-tighter text-xs text-neutral-600">Septiembre, 2024 - Enero, 2025</time>
-                            <h3 class="font-semibold">Profesor de ciencias</h3>
-                            <p class="text-sm">Impartí clases de Programación, Tecnología, y ocasionalmente de Ciencias Exactas, a estudiantes de 8 a 18 años en el Centro de Aprendizaje y Desarrollo de Habilidades MindUp. Dos clases semanales, enfocadas en aplicaciones, programas, código y resolución de problemas. Apliqué conocimientos de paquetería Office, así como conocimientos prácticos y teóricos de programación.</p>
-                        </li>
+                    <h2 class="font-type font-medium text-sm">¿Cómo sabe alguien qué puede enseñar?</h2>
+                    <p class="text-sm">El no tener un título universitario puede llevar rápidamente a pensar que no se está capacitado, al igual que la corta edad, que a menudo se asocia con desconocimiento. Sin embargo, existen excepciones. Si una persona ha dedicado una cantidad considerable de tiempo a profundizar en un tema, es evidente que posee más conocimiento sobre ese tema. Cuando alguien estudia por disciplina propia, también está demostrando un gusto por el aprendizaje.</p>
+                </div>
+
+                <div class="space-y-1.5">
+                    <h2 class="small">Experiencia:</h2>
+                    <ul class="space-y-2.5">
+                        {experiences.map(item => (
+                            <li>
+                                <time datetime={item.datetime} class="font-type font-medium text-xs text-neutral-600">{item.datetext}</time>
+                                <h3 class="font-type font-semibold text-lg">{item.title}</h3>
+                                <h4 class="font-type font-medium uppercase text-xs">{item.company}</h4>
+                                <p class="mt-2 text-sm">{item.description}</p>
+                            </li>
+                        ))}
                     </ul>
                 </div>
 
-                <div>
-                    <h2 class="text-xs text-neutral-600">Educación:</h2>
-                    
+                <div class="space-y-1.5">
+                    <h2 class="small">Educación:</h2>
+                    <ul class="space-y-2.5">
+                        {schools.map(item => (
+                            <li>
+                                <time datetime={item.datetime} class="font-type font-medium text-xs text-neutral-600">{item.datetext}</time>
+                                <h3 class="font-type font-semibold text-lg">{item.title}</h3>
+                                <h4 class="font-type font-medium uppercase text-xs">{item.company}</h4>
+                                <p class="mt-2 text-sm">{item.description}</p>
+                            </li>
+                        ))}
+                    </ul>
                 </div>
 
-                <div>
-                    <h2 class="text-xs text-neutral-600">Objetivo como docente:</h2>
-                    
-                </div>
-
-                <div>
-                    <h2 class="text-xs text-neutral-600">Texto:</h2>
-                    
+                <div class="space-y-1.5">
+                    <h2 class="small">Objetivo como docente:</h2>
+                    <p class="font-serif-italic text-lg">Que los alumnos conozcan lo mucho que desconocemos.</p>
                 </div>
 			</article>
 
